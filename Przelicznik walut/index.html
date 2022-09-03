@@ -21,7 +21,14 @@
           </div>
           <h3>Jaką kwote chcesz przeliczyć</h3>
           <div>
-            <input id="inputAmount" type="number" placeholder="Wpisz kwote" />zł
+            <input
+              id="inputAmount"
+              type="number"
+              min="0"
+              oninput="this.value = 
+            !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null"
+              placeholder="Wpisz kwote"
+            />zł
           </div>
           <div id="optionsCurrency">
             <h3>Wybierz walute</h3>

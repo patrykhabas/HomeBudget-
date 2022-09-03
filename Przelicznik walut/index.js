@@ -31,7 +31,7 @@ axios
     });
   })
   .catch((err) => {
-    console.log(err);
+    console.error(err);
   });
 
 submitBtn.addEventListener('click', () => {
